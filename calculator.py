@@ -13,27 +13,28 @@ while True:
 
     numbers = user_input.split(" ")
     func = numbers[0]
-    num1 = float(numbers[1])
+    float_num = []
 
-    if func != "square" and func != "cube":
-            num2 = float(numbers[2])
+    for i in numbers[1:]:
+        float_num.append(float(i))
+
 
     if func == "+":
-        print(add(num1, num2))
+        print(add(float_num))
     elif func == "-":
-        print(subtract(num1, num2))
+        print(subtract(float_num))
     elif func == "*":
-        print(multiply(num1, num2))
+        print(multiply(float_num))
     elif func == "/":
-        print(divide(num1, num2))
+        print(divide(float_num))
     elif func == "square":
-        print(square(num1))
+        print(square(float_num))
     elif func == "cube":
-        print(cube(num1))
+        print(cube(float_num))
     elif func == "pow":
-        print(power(num1, num2))
+        print(power(float_num))
     elif func == "mod":
-        print(mod(num1, num2))
+        print(mod(float_num))
 
 
 # Your code goes here
